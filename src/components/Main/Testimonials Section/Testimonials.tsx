@@ -1,4 +1,10 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import required modules
+import { Pagination } from "swiper/modules";
 
 const Testimonials: React.FC = () => {
 	return (
@@ -6,10 +12,16 @@ const Testimonials: React.FC = () => {
 			<div className="testimonials paralax-mf bg-image" style={{ backgroundImage: `url(assets/img/overlay-bg.jpg)` }}>
 				<div className="overlay-mf"></div>
 				<div className="container">
-					<div className="row">
-						<div className="col-md-12">
-							<div className="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-								<div className="swiper-wrapper">
+					<Swiper
+						pagination={{
+							dynamicBullets: true,
+						}}
+						modules={[Pagination]}
+						className="mySwiper"
+					>
+						<div className="row">
+							<div className="col-md-12">
+								<SwiperSlide>
 									<div className="swiper-slide">
 										<div className="testimonial-box">
 											<div className="author-test">
@@ -17,7 +29,7 @@ const Testimonials: React.FC = () => {
 												<span className="author">Xavi Alonso</span>
 											</div>
 											<div className="content-test">
-												<p className="description lead">
+												<p className="description lead " style={{marginBottom:35}}>
 													Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur
 													adipiscing elit.
 												</p>
@@ -25,7 +37,8 @@ const Testimonials: React.FC = () => {
 										</div>
 									</div>
 									{/* <!-- End testimonial item --> */}
-
+								</SwiperSlide>
+								<SwiperSlide>
 									<div className="swiper-slide">
 										<div className="testimonial-box">
 											<div className="author-test">
@@ -41,13 +54,10 @@ const Testimonials: React.FC = () => {
 										</div>
 									</div>
 									{/* <!-- End testimonial item --> */}
-								</div>
-								<div className="swiper-pagination"></div>
+								</SwiperSlide>
 							</div>
-
-							{/* <div id="testimonial-mf" className="owl-carousel owl-theme"></div> */}
 						</div>
-					</div>
+					</Swiper>
 				</div>
 			</div>
 		</>
