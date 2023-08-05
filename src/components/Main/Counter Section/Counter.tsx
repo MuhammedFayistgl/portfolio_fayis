@@ -19,8 +19,8 @@ const Counter: React.FC = () => {
 										<i className="bi bi-check"></i>
 									</span>
 								</div>
-								<div className="counter-num">
-									<CountUp enableScrollSpy duration={4}  end={100} />
+								<div className="counter-num"style={{display:'flex',flexDirection:'column'}}>
+									<CountUp  className="counter " enableScrollSpy duration={4}  end={100} />
 									<span className="counter-text">WORKS COMPLETED</span>
 								</div>
 							</div>
@@ -32,8 +32,8 @@ const Counter: React.FC = () => {
 										<i className="bi bi-journal-richtext"></i>
 									</span>
 								</div>
-								<div className="counter-num">			
-								<CountUp enableScrollSpy duration={4} end={100} />
+								<div className="counter-num"style={{display:'flex',flexDirection:'column'}}>			
+								<CountUp  className="counter " enableScrollSpy duration={4} end={100} />
 									<span className="counter-text">YEARS OF EXPERIENCE</span>
 								</div>
 							</div>
@@ -45,8 +45,8 @@ const Counter: React.FC = () => {
 										<i className="bi bi-people"></i>
 									</span>
 								</div>
-								<div className="counter-num">
-									<CountUp enableScrollSpy duration={4} end={100} />
+								<div className="counter-num"style={{display:'flex',flexDirection:'column'}}>
+									<CountUp  className="counter " enableScrollSpy duration={4} end={100} />
 									<span className="counter-text">TOTAL CLIENTS</span>
 								</div>
 							</div>
@@ -58,8 +58,8 @@ const Counter: React.FC = () => {
 										<i className="bi bi-award"></i>
 									</span>
 								</div>
-								<div className="counter-num">
-								<CountUp enableScrollSpy  end={100} />
+								<div className="counter-num" style={{display:'flex',flexDirection:'column'}}>
+								<CountUp className="counter " enableScrollSpy  end={100} />
 									<span className="counter-text">AWARD WON</span>
 								</div>
 							</div>
