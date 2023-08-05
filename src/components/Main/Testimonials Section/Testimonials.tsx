@@ -3,7 +3,6 @@ import React from "react";
 const Testimonials: React.FC = () => {
 	return (
 		<>
-			{" "}
 			<div className="testimonials paralax-mf bg-image" style={{ backgroundImage: `url(assets/img/overlay-bg.jpg)` }}>
 				<div className="overlay-mf"></div>
 				<div className="container">
@@ -46,7 +45,7 @@ const Testimonials: React.FC = () => {
 								<div className="swiper-pagination"></div>
 							</div>
 
-							<div id="testimonial-mf" className="owl-carousel owl-theme"></div>
+							{/* <div id="testimonial-mf" className="owl-carousel owl-theme"></div> */}
 						</div>
 					</div>
 				</div>

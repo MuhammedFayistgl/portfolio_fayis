@@ -1,5 +1,5 @@
 import React from "react";
-
+import Typed from "react-typed";
 const Hero: React.FC = () => {
 	return (
 		<>
@@ -10,9 +10,14 @@ const Hero: React.FC = () => {
 					<div className="table-cell">
 						<div className="container">
 							<p className="display-6 color-d">Hello, world!</p>
-							<h1 className="hero-title mb-4">I am Morgan Freeman</h1>
+							<h1 className="hero-title mb-4">I am Muhammed Fayis</h1>
 							<p className="hero-subtitle">
-								<span className="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span>
+								<Typed
+									strings={["Designer", "Developer", "Freelancer", "Graphic Designer "]}
+									typeSpeed={60}
+									backSpeed={50}
+									loop
+								/>
 							</p>
 							<p className="pt-3">
 								<a className="btn btn-primary btn js-scroll px-4" href="#about" role="button">
