@@ -1,9 +1,10 @@
 import React from "react";
+import { Link} from "react-router-dom";
 
 const Portfolio: React.FC = () => {
 	return (
 		<>
-			{" "}
+
 			<section id="work" className="portfolio-mf sect-pt4 route">
 				<div className="container">
 					<div className="row">
@@ -34,8 +35,9 @@ const Portfolio: React.FC = () => {
 										<div className="col-sm-4">
 											<div className="w-like">
 												<a href="portfolio-details.html">
-													{" "}
+												<Link to={'/portfolio-details'}>
 													<span className="bi bi-plus-circle"></span>
+												</Link>
 												</a>
 											</div>
 										</div>
@@ -61,8 +63,9 @@ const Portfolio: React.FC = () => {
 										<div className="col-sm-4">
 											<div className="w-like">
 												<a href="portfolio-details.html">
-													{" "}
+												<Link to={'/portfolio-details'}>
 													<span className="bi bi-plus-circle"></span>
+												</Link>
 												</a>
 											</div>
 										</div>
@@ -88,8 +91,9 @@ const Portfolio: React.FC = () => {
 										<div className="col-sm-4">
 											<div className="w-like">
 												<a href="portfolio-details.html">
-													{" "}
+												<Link to={'/portfolio-details'}>
 													<span className="bi bi-plus-circle"></span>
+												</Link>
 												</a>
 											</div>
 										</div>
@@ -115,8 +119,9 @@ const Portfolio: React.FC = () => {
 										<div className="col-sm-4">
 											<div className="w-like">
 												<a href="portfolio-details.html">
-													{" "}
+												<Link to={'/portfolio-details'}>
 													<span className="bi bi-plus-circle"></span>
+												</Link>
 												</a>
 											</div>
 										</div>
@@ -142,8 +147,9 @@ const Portfolio: React.FC = () => {
 										<div className="col-sm-4">
 											<div className="w-like">
 												<a href="portfolio-details.html">
-													{" "}
+												<Link to={'/portfolio-details'}>
 													<span className="bi bi-plus-circle"></span>
+												</Link>
 												</a>
 											</div>
 										</div>
@@ -169,8 +175,9 @@ const Portfolio: React.FC = () => {
 										<div className="col-sm-4">
 											<div className="w-like">
 												<a href="portfolio-details.html">
-													{" "}
+												<Link to={'/portfolio-details'}>
 													<span className="bi bi-plus-circle"></span>
+												</Link>
 												</a>
 											</div>
 										</div>

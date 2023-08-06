@@ -10,6 +10,7 @@ import Services from "./components/Main/Services Section/Services";
 import Portfolio from "./components/Main/Portfolio Section/Portfolio";
 import Blog from "./components/Main/Blog Section/Blog";
 import Contact from "./components/Main/Contact Section/Contact";
+import Portfoliodetails from "./components/Main/portfolio-details/Portfoliodetails";
 const App: React.FunctionComponent = () => {
 	// "background-image: url(assets/img/hero-bg.jpg)"
 	return (
@@ -30,6 +31,7 @@ const App: React.FunctionComponent = () => {
 				<Route path={"/work"} element={<Portfolio />} />
 				<Route path={"/blog"} element={<Blog />} />
 				<Route path={"/contact"} element={<Contact />} />
+				<Route path={"/portfolio-details"} element={<Portfoliodetails />} />
 			</Routes>
 		</Suspense>
 	);

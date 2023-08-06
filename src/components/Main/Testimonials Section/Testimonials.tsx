@@ -29,7 +29,7 @@ const Testimonials: React.FC = () => {
 												<span className="author">Xavi Alonso</span>
 											</div>
 											<div className="content-test">
-												<p className="description lead " style={{marginBottom:35}}>
+												<p className="description lead " style={{ marginBottom: 35 }}>
 													Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur
 													adipiscing elit.
 												</p>
