@@ -1,19 +1,21 @@
 import React from "react";
-import { Nav } from "rsuite";
-import HomeIcon from "@rsuite/icons/legacy/Home";
-// import {FcHome} from 'react-icons/fc'
+// import { Nav } from "rsuite";
+import { FcHome } from "react-icons/fc";
+import { NavLink } from "react-router-dom";
+import ResponsiveNav from '@rsuite/responsive-nav';
 const Navbar: React.FC = () => {
 	return (
 		<>
-			<Nav  appearance="subtle" style={{ marginBottom: 50 }}>
-				<Nav.Item eventKey="home" icon={<HomeIcon />}>
+			<ResponsiveNav appearance="subtle" style={{ marginBottom: 50 }}>
+				<ResponsiveNav.Item to="/" as={NavLink} icon={<FcHome />}>
 					Home
-				</Nav.Item>
-				<Nav.Item eventKey="news">News</Nav.Item>
-				<Nav.Item eventKey="solutions">Solutions</Nav.Item>
-				<Nav.Item eventKey="products">Products</Nav.Item>
-				<Nav.Item eventKey="about">About</Nav.Item>
-			</Nav>
+				</ResponsiveNav.Item>
+			<ResponsiveNav.Item to="/about"  as={NavLink}>about  </ResponsiveNav.Item>
+				<ResponsiveNav.Item to="/services" as={NavLink}>services</ResponsiveNav.Item>
+				<ResponsiveNav.Item to="/work" as={NavLink}>work</ResponsiveNav.Item>
+				<ResponsiveNav.Item to="/blog" as={NavLink}>blog</ResponsiveNav.Item>
+				<ResponsiveNav.Item to="/contact" as={NavLink}>contact</ResponsiveNav.Item>
+			</ResponsiveNav>
 		</>
 	);
 };

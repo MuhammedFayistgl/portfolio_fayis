@@ -1,12 +1,18 @@
 import React from "react";
 
 const Services: React.FC = () => {
+	const style: object = {
+		// Adding media query..
+		"@media (max-width: 375px)": {
+			margintop: "10px",
+		},
+	};
 	return (
 		<>
 			{" "}
-			<section id="services" className="services-mf pt-5 route">
+			<section id="services" className="services-mf pt-5 mt-4 route">
 				<div className="container">
-					<div className="row">
+					<div className="row" style={style}>
 						<div className="col-sm-12">
 							<div className="title-box text-center">
 								<h3 className="title-a">Services</h3>
