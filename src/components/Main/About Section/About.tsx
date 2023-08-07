@@ -1,5 +1,9 @@
 import React from "react";
-
+import ProgressComp from "./Progress/ProgressComp";
+type ProgressComp ={
+	percent:number,
+	status?: "success" | "fail" | "active" | undefined
+}
 const About: React.FC = () => {
 	return (
 		<>
@@ -13,63 +17,38 @@ const About: React.FC = () => {
 										<div className="row">
 											<div className="col-sm-6 col-md-5">
 												<div className="about-img">
-													<img src="assets/img/testimonial-2.jpg" className="img-fluid rounded b-shadow-a" alt="" />
+													{/* <img src="assets/img/testimonial-2.jpg" className="img-fluid rounded b-shadow-a" alt="" /> */}
+													<img src="assets/img/profilethamb.jpg" className="img-fluid rounded b-shadow-a" alt="" />
 												</div>
 											</div>
 											<div className="col-sm-6 col-md-7">
 												<div className="about-info">
 													<p>
-														<span className="title-s">Name: </span> <span>Morgan Freeman</span>
+														<span className="title-s">Name: </span> <span>Muhammed Fayis Thangal</span>
 													</p>
 													<p>
 														<span className="title-s">Profile: </span> <span>full stack developer</span>
 													</p>
 													<p>
-														<span className="title-s">Email: </span> <span>contact@example.com</span>
+														<span className="title-s">Email: </span> <span>muhammedfayisthangal@gmail.com</span>
 													</p>
 													<p>
-														<span className="title-s">Phone: </span> <span>(617) 557-0089</span>
+														<span className="title-s">Phone: </span> <span>8086860760</span>
 													</p>
 												</div>
 											</div>
 										</div>
 										<div className="skill-mf">
 											<p className="title-s">Skill</p>
-											<span>HTML</span> <span className="pull-right">85%</span>
-											<div className="progress">
-												<div
-													className="progress-bar"
-													role="progressbar"
-													style={{ width: "85%" }}
-													aria-valuenow={85}
-													aria-valuemin={0}
-													aria-valuemax={100}
-												></div>
-											</div>
-											<span>CSS3</span> <span className="pull-right">75%</span>
-											<div className="progress">
-												<div
-													className="progress-bar"
-													role="progressbar"
-													style={{ width: "75%" }}
-													aria-valuenow={75}
-													aria-valuemin={0}
-													aria-valuemax={100}
-												></div>
-											</div>
-											<span>PHP</span> <span className="pull-right">50%</span>
-											<div className="progress">
-												<div
-													className="progress-bar"
-													role="progressbar"
-													style={{ width: "50%" }}
-													aria-valuenow={50}
-													aria-valuemin={0}
-													aria-valuemax={100}
-												></div>
-											</div>
-											<span>JAVASCRIPT</span> <span className="pull-right">90%</span>
-											<div className="progress">
+											<span>React</span> <span className="pull-right">85%</span>					
+											<ProgressComp percent={60} status={'active'}/>
+											<span>Javascript</span> <span className="pull-right">75%</span>
+											<ProgressComp percent={80} status={'active'}/>
+											<span>Nodejs</span> <span className="pull-right">50%</span>
+											<ProgressComp percent={50} status={'active'}/>
+											<span>MongoDB</span> <span className="pull-right">90%</span>
+											<ProgressComp percent={40} status={'active'}/>
+											{/* <div className="progress">
 												<div
 													className="progress-bar"
 													role="progressbar"
@@ -78,7 +57,7 @@ const About: React.FC = () => {
 													aria-valuemin={0}
 													aria-valuemax={100}
 												></div>
-											</div>
+											</div> */}
 										</div>
 									</div>
 									<div className="col-md-6">

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Blog: React.FC = () => {
 	return (
 		<>
@@ -19,9 +19,11 @@ const Blog: React.FC = () => {
 						<div className="col-md-4">
 							<div className="card card-blog">
 								<div className="card-img">
-									<a href="blog-single.html">
-										<img src="assets/img/post-1.jpg" alt="" className="img-fluid" />
-									</a>
+									<Link to={"/Blog-Single-details"}>
+										<a>
+											<img src="assets/img/post-1.jpg" alt="" className="img-fluid" />
+										</a>
+									</Link>
 								</div>
 								<div className="card-body">
 									<div className="card-category-box">
@@ -53,9 +55,11 @@ const Blog: React.FC = () => {
 						<div className="col-md-4">
 							<div className="card card-blog">
 								<div className="card-img">
-									<a href="blog-single.html">
-										<img src="assets/img/post-2.jpg" alt="" className="img-fluid" />
-									</a>
+									<Link to={"/Blog-Single-details"}>
+										<a >
+											<img src="assets/img/post-2.jpg" alt="" className="img-fluid" />
+										</a>
+									</Link>
 								</div>
 								<div className="card-body">
 									<div className="card-category-box">
@@ -87,9 +91,11 @@ const Blog: React.FC = () => {
 						<div className="col-md-4">
 							<div className="card card-blog">
 								<div className="card-img">
-									<a href="blog-single.html">
-										<img src="assets/img/post-3.jpg" alt="" className="img-fluid" />
-									</a>
+									<Link to={"/Blog-Single-details"}>
+										<a >
+											<img src="assets/img/post-3.jpg" alt="" className="img-fluid" />
+										</a>
+									</Link>
 								</div>
 								<div className="card-body">
 									<div className="card-category-box">
