@@ -1,9 +1,9 @@
 import React from "react";
 import ProgressComp from "./Progress/ProgressComp";
-type ProgressComp ={
-	percent:number,
-	status?: "success" | "fail" | "active" | undefined
-}
+type ProgressComp = {
+	percent: number;
+	status?: "success" | "fail" | "active" | undefined;
+};
 const About: React.FC = () => {
 	return (
 		<>
@@ -40,14 +40,14 @@ const About: React.FC = () => {
 										</div>
 										<div className="skill-mf">
 											<p className="title-s">Skill</p>
-											<span>React</span> <span className="pull-right">85%</span>					
-											<ProgressComp percent={60} status={'active'}/>
+											<span>React</span> <span className="pull-right">85%</span>
+											<ProgressComp percent={60} status={"active"} />
 											<span>Javascript</span> <span className="pull-right">75%</span>
-											<ProgressComp percent={80} status={'active'}/>
+											<ProgressComp percent={80} status={"active"} />
 											<span>Nodejs</span> <span className="pull-right">50%</span>
-											<ProgressComp percent={50} status={'active'}/>
+											<ProgressComp percent={50} status={"active"} />
 											<span>MongoDB</span> <span className="pull-right">90%</span>
-											<ProgressComp percent={40} status={'active'}/>
+											<ProgressComp percent={40} status={"active"} />
 											{/* <div className="progress">
 												<div
 													className="progress-bar"
@@ -65,19 +65,18 @@ const About: React.FC = () => {
 											<div className="title-box-2">
 												<h5 className="title-left">About me</h5>
 											</div>
-											<p className="lead">
-												Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
-												imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
-												Nulla porttitor accumsan tincidunt.
+											<p className="lead" >
+												I am Muhammed Fayis Thangal, a passionate freelancer bringing you programming and design from the future. My expertise is
+												developing next-level websites and web applications including full frontend design.
 											</p>
-											<p className="lead">
+											{/* <p className="lead">
 												Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor
 												volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
 											</p>
 											<p className="lead">
 												Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla
 												porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-											</p>
+											</p> */}
 										</div>
 									</div>
 								</div>
