@@ -6,8 +6,8 @@ import ResponsiveNav from "@rsuite/responsive-nav";
 const Navbar: React.FC = () => {
 	const [active, setActive] = React.useState("Home")
 
-
-
+	type setActive =  React.Dispatch<React.SetStateAction<string>>
+	type active = string
 
 	return (
 		<>
