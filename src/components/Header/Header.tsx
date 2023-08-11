@@ -1,23 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import "./header.css";
 import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
+	
+	const [currentURL] = useState( window.location.pathname)
+
+
+	
 	return (
 		<>
-			<header id="header" className="fixed-top">
-				<div className="container d-flex  justify-content-between">
-					<h1 className="logo " style={{ lineHeight: -1 }}>
-						<Link className="myLogo" to={"/"}>
-							DevFolio
-						</Link>
+			<header id="header" className={ currentURL=="/"  ? "fixed-top " : 'fixed-top header-scrolled'}>
+				<div className="container d-flex align-items-center justify-content-between">
+					<h1 className="logo">
+						<Link to={'/'} >DevFolio</Link>
 					</h1>
-					{/* <!-- Uncomment below if you prefer to use an image logo --> */}
-					<a href="index.html" className="logo">
+
+					<Link to={'/'}  className="logo">
 						<img src="assets/img/logo.png" alt="" className="img-fluid" />
-					</a>
-					<Navbar /> {/* <!-- .navbar --> */}
+					</Link>
+
+					<Navbar/>
 				</div>
 			</header>
 		</>
