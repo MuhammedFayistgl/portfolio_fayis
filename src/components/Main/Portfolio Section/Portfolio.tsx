@@ -3,31 +3,11 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Portfolio: React.FC = () => {
-	const data: Array = [
-		{
-			title: "Portfolio",
-			ctegory: "portfolio",
-			imgSrc: "assets/img/work-1.jpg",
-			date: "51/78/2012",
-		},
-		{
-			title: "Portfolio",
-			ctegory: "portfolio",
-			imgSrc: "assets/img/code.jpg",
-			date: "51/78/2012",
-		},
-		{
-			title: "Portfolio",
-			ctegory: "portfolio",
-			imgSrc: "assets/img/work-3.jpg",
-			date: "51/78/2012",
-		},
-		{
-			title: "Portfolio",
-			ctegory: "portfolio",
-			imgSrc: "assets/img/work-4.jpg",
-			date: "51/78/2012",
-		},
+	const data = [
+		{ id: 1, title: "Portfolio", ctegory: "portfolio", imgSrc: "assets/img/work-1.jpg", date: "51/78/2012" },
+		{ id: 2, title: "Portfolio", ctegory: "portfolio", imgSrc: "assets/img/code.jpg", date: "51/78/2012" },
+		{ id: 3, title: "Portfolio", ctegory: "portfolio", imgSrc: "assets/img/work-3.jpg", date: "51/78/2012" },
+		{ id: 4, title: "Portfolio", ctegory: "portfolio", imgSrc: "assets/img/work-4.jpg", date: "51/78/2012" },
 	];
 	return (
 		<>
@@ -43,10 +23,10 @@ const Portfolio: React.FC = () => {
 						</div>
 					</div>
 					<div className="row">
-						{data.map((value: string, index: number) => {
+						{data.map((value) => {
 							return (
 								<>
-									<div className="col-md-4" key={index}>
+									<div className="col-md-4" key={value.id}>
 										<div className="work-box ">
 											<a
 												onClick={() => {
@@ -62,7 +42,7 @@ const Portfolio: React.FC = () => {
 												className="portfolio-lightbox"
 											>
 												<div className="work-img">
-													<img src={value.imgSrc} alt="" className="img-fluid" />
+													<img src={value?.imgSrc} alt="" className="img-fluid" />
 												</div>
 											</a>
 											<div className="work-content">
