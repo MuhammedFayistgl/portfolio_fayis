@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Typed from "react-typed";
 const Hero: React.FC = () => {
 	return (
 		<>
 			{" "}
-			<div id="hero" className="hero route bg-image" style={{ backgroundImage: `url(assets/img/hero-bg.jpg)` }}>
+			<div id="hero" className="hero route bg-image" style={{ backgroundImage: `url(assets/img/myProfile.jpg)` }}>
 				<div className="overlay-itro"></div>
 				<div className="hero-content display-table">
 					<div className="table-cell">
@@ -20,9 +21,9 @@ const Hero: React.FC = () => {
 								/>
 							</p>
 							<p className="pt-3">
-								<a className="btn btn-primary btn js-scroll px-4" href="#about" role="button">
+								<Link to={'/about'}  className="btn btn-primary btn js-scroll px-4"  role="button">
 									Learn More
-								</a>
+								</Link>
 							</p>
 						</div>
 					</div>
