@@ -1,22 +1,29 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import { Vlogs } from "../../../Data/VlogData";
+import CommentCompnent from "./EX_Comp/Comment";
+import BreadcrumbComp from "../../../Hooks/BreadcrumbHook";
 
 const BlogSingle: React.FC = () => {
+	const parms = useParams();
+
 	return (
 		<>
-			<div className="hero hero-single route bg-image" style={{ backgroundImage: ` url(assets/img/overlay-bg.jpg)` }}>
+			<div className="hero hero-single route bg-image overlaybg ">
 				<div className="overlay-mf"></div>
 				<div className="hero-content display-table">
 					<div className="table-cell">
 						<div className="container">
 							<h2 className="hero-title mb-4">Blog Details</h2>
 							<ol className="breadcrumb d-flex justify-content-center">
-								<li className="breadcrumb-item">
+								<BreadcrumbComp/>
+								{/* <li className="breadcrumb-item">
 									<a href="#">Home</a>
 								</li>
 								<li className="breadcrumb-item">
 									<a href="#">Library</a>
 								</li>
-								<li className="breadcrumb-item active">Data</li>
+								<li className="breadcrumb-item active">Data</li> */}
 							</ol>
 						</div>
 					</div>
@@ -29,87 +36,68 @@ const BlogSingle: React.FC = () => {
 					<div className="container">
 						<div className="row">
 							<div className="col-md-8">
-								<div className="post-box">
-									<div className="post-thumb">
-										<img src="assets/img/post-1.jpg" className="img-fluid" alt="" />
-									</div>
-									<div className="post-meta">
-										<h1 className="article-title">Lorem ipsum dolor sit amet consec tetur adipisicing</h1>
-										<ul>
-											<li>
-												<span className="bi bi-person"></span>
-												<a href="#">Jason London</a>
-											</li>
-											<li>
-												<span className="bi bi-tag"></span>
-												<a href="#">Web Design</a>
-											</li>
-											<li>
-												<span className="bi bi-chat-left-text"></span>
-												<a href="#">14</a>
-											</li>
-										</ul>
-									</div>
-									<div className="article-content">
-										<p>
-											Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta.
-											Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a
-											pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-											cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem
-											ut libero malesuada feugiat.
-										</p>
-										<p>
-											Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet
-											elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit
-											amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada.
-										</p>
-										<p>
-											Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur
-											adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor
-											sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-											Donec rutrum congue leo eget malesuada.
-										</p>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.
-											Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis
-											porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut
-											lacinia in, elementum id enim.
-										</p>
-										<blockquote className="blockquote">
-											<p className="mb-0">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-											</p>
-										</blockquote>
-										<p>
-											Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet
-											elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit
-											amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada.
-										</p>
-									</div>
-								</div>
+								{Vlogs.filter((vlog) => `${vlog.id}` == parms.id).map((siglvlog) => {
+									return (
+										<div key={siglvlog?.id} className="post-box">
+											<div className="post-thumb">
+												<img src="img/post-1.jpg" className="img-fluid" alt="" />
+											</div>
+											<div className="post-meta">
+												<h1 className="article-title">{siglvlog?.title}</h1>
+												<ul>
+													<li>
+														<span className="bi bi-person"></span>
+														<a href="#">{siglvlog?.author}</a>
+													</li>
+													<li>
+														<span className="bi bi-tag"></span>
+														<a href="#">{siglvlog?.category}</a>
+													</li>
+													<li>
+														<span className="bi bi-chat-left-text"></span>
+														<a href="#">14</a>
+													</li>
+												</ul>
+											</div>
+											<div className="article-content">
+												<p>{siglvlog?.articlecontent.slice(0, siglvlog?.articlecontent?.length / 2)}</p>
+
+												<blockquote className="blockquote">
+													<p className="mb-0">{siglvlog?.articlecontent.slice(500, 700)}</p>
+												</blockquote>
+												<p>{siglvlog?.articlecontent?.slice(1000, siglvlog?.articlecontent?.length)}</p>
+											</div>
+										</div>
+									);
+								})}
+
 								<div className="box-comments">
 									<div className="title-box-2">
 										<h4 className="title-comments title-left">Comments (34)</h4>
 									</div>
-									<ul className="list-comments">
-										<li>
+
+									<CommentCompnent />
+									{/* <ul className="list-comments">
+										{Vlogs.map((val) => val.comments.map((val) => {return (
+
+<li>
 											<div className="comment-avatar">
-												<img src="assets/img/testimonial-2.jpg" alt="" />
+												<img src="img/testimonial-2.jpg" alt="" />
 											</div>
 											<div className="comment-details">
 												<h4 className="comment-author">Oliver Colmenares</h4>
 												<span>18 Sep 2017</span>
 												<p>
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque ipsam
-													temporibus maiores quae natus libero optio, at qui beatae ducimus placeat debitis voluptates amet
-													corporis.
+													{val.commentvalue}
 												</p>
 												<a href="3">Reply</a>
 											</div>
 										</li>
+										)} ))}
+										
 										<li>
 											<div className="comment-avatar">
-												<img src="assets/img/testimonial-4.jpg" alt="" />
+												<img src="img/testimonial-4.jpg" alt="" />
 											</div>
 											<div className="comment-details">
 												<h4 className="comment-author">Carmen Vegas</h4>
@@ -124,7 +112,7 @@ const BlogSingle: React.FC = () => {
 										</li>
 										<li className="comment-children">
 											<div className="comment-avatar">
-												<img src="assets/img/testimonial-2.jpg" alt="" />
+												<img src="img/testimonial-2.jpg" alt="" />
 											</div>
 											<div className="comment-details">
 												<h4 className="comment-author">Oliver Colmenares</h4>
@@ -138,7 +126,7 @@ const BlogSingle: React.FC = () => {
 										</li>
 										<li>
 											<div className="comment-avatar">
-												<img src="assets/img/testimonial-2.jpg" alt="" />
+												<img src="img/testimonial-2.jpg" alt="" />
 											</div>
 											<div className="comment-details">
 												<h4 className="comment-author">Oliver Colmenares</h4>
@@ -150,7 +138,7 @@ const BlogSingle: React.FC = () => {
 												<a href="3">Reply</a>
 											</div>
 										</li>
-									</ul>
+									</ul> */}
 								</div>
 								<div className="form-comments">
 									<div className="title-box-2">

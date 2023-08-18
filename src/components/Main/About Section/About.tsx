@@ -18,7 +18,7 @@ const About: React.FC = () => {
 											<div className="col-sm-6 col-md-5">
 												<div className="about-img">
 													{/* <img src="assets/img/testimonial-2.jpg" className="img-fluid rounded b-shadow-a" alt="" /> */}
-													<img src="assets/img/profilethamb.jpg" className="img-fluid rounded b-shadow-a" alt="" />
+													<img src="img/profilethamb.jpg" className="img-fluid rounded b-shadow-a" alt="" />
 												</div>
 											</div>
 											<div className="col-sm-6 col-md-7">

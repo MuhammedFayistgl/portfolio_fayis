@@ -1,5 +1,4 @@
 import React from "react";
-// import {ReactCountUp} from '../../../Hooks/ReactCountUp'
 import CountUp from 'react-countup';
 
 const Counter: React.FC = () => {
@@ -7,8 +6,7 @@ const Counter: React.FC = () => {
 
 	return (
 		<div>
-			{" "}
-			<div className="section-counter paralax-mf bg-image" style={{ backgroundImage: `url(assets/img/counters-bg.jpg)` }}>
+			<div className="section-counter paralax-mf bg-image mt-5 counter-bg" >
 				<div className="overlay-mf"></div>
 				<div className="container position-relative">
 					<div className="row">

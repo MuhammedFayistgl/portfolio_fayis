@@ -163,3 +163,6 @@ body {
 		left: -25px;
 	}
 }
+a:active, a:focus, a:hover {
+    text-decoration: none !important;
+}

@@ -1,22 +1,27 @@
-import React, { Suspense } from "react";
-import "./App.css";
+import React, { Suspense, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero/Hero";
 import Main from "./components/Main/Main";
 import Header from "./components/Header/Header";
-// const Header = lazy(() => import("./components/Header/Header"));
-import { Routes, Route } from "react-router-dom";
-import About from "./components/Main/About Section/About";
-import Services from "./components/Main/Services Section/Services";
-import Portfolio from "./components/Main/Portfolio Section/Portfolio";
-import Blog from "./components/Main/Blog Section/Blog";
-import Contact from "./components/Main/Contact Section/Contact";
-import Portfoliodetails from "./components/Routers/portfolio-details/Portfoliodetails";
-import BlogSingle from "./components/Routers/Blog Single/BlogSingle";
 import Footer from "./components/Footer/Footer";
+
+const About     = lazy(() => import("./components/Main/About Section/About"))
+const Services  = lazy(() => import("./components/Main/Services Section/Services"))
+const Portfolio = lazy(() => import("./components/Main/Portfolio Section/Portfolio"))
+const Blog      = lazy(() => import("./components/Main/Blog Section/Blog"))
+const Contact   = lazy(() => import("./components/Main/Contact Section/Contact"))
+const BlogSingle = lazy(() => import("./components/Routers/Blog Single/BlogSingle"));
+const Portfoliodetails = lazy(() => import("./components/Routers/portfolio-details/Portfoliodetails"));
+
+import Loader from "./components/sm_Componet/Loader";
+import "./App.css";
+
+
+
 const App: React.FunctionComponent = () => {
-	// "background-image: url(assets/img/hero-bg.jpg)"
+
 	return (
-		<Suspense fallback={"loading"}>
+		<Suspense fallback={<Loader/>}>
 			<Header />
 			<Routes>
 				<Route
@@ -30,11 +35,15 @@ const App: React.FunctionComponent = () => {
 				/>
 				<Route path={"/about"} element={<About />} />
 				<Route path={"/services"} element={<Services />} />
-				<Route path={"/work"} element={<Portfolio />} />
+				<Route path={"/work"} element={ <Portfolio /> } >
+					
+				</Route>
 				<Route path={"/blog"} element={<Blog />} />
 				<Route path={"/contact"} element={<Contact />} />
-				<Route path={"/portfolio-details"} element={<Portfoliodetails />} />
-				<Route path={"/Blog-Single-details"} element={<BlogSingle />} />
+
+				{/* extra coponents */}
+				<Route path={"Work/portfolio-details/:id"} element={<Portfoliodetails />} />
+				<Route path={"Blog/Blog-Single-details/:id"} element={<BlogSingle />} />
 			</Routes>
 			<Footer />
 		</Suspense>

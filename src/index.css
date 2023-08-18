@@ -153,6 +153,7 @@ h6 {
 .subtitle-a {
 	text-decoration: none;
 	color: #4e4e4e;
+	margin: 20px;
 }
 
 .line-mf {
@@ -215,7 +216,7 @@ h6 {
 	width: 40px;
 	font-size: 1.2rem;
 	border-radius: 50%;
-	line-height: 1.6;
+	line-height: 2.5;
 	margin: 0 15px 0 0;
 	box-shadow: 0 0 0 3px #0078ff;
 	transition: all 500ms ease;
@@ -462,7 +463,7 @@ h6 {
 
 #header.header-scrolled {
 	background: rgba(0, 0, 0, 0.9);
-	padding: 12px 0;
+	padding: 0 0;
 }
 
 /*--------------------------------------------------------------
@@ -729,6 +730,7 @@ h6 {
 	height: 100vh;
 	position: relative;
 	color: #fff;
+	background-image: url(img/myProfile.jpg);
 }
 
 .hero .hero-content {
@@ -916,7 +918,7 @@ h6 {
 .counter-ico .ico-circle {
 	height: 60px;
 	width: 60px;
-	line-height: 1.5;
+	line-height: 2;
 	box-shadow: 0 0 0 10px #cde1f8;
 }
 
@@ -1452,5 +1454,52 @@ footer .credits a {
 @media (min-width: 768px) {
 	.col-md-7 {
 		overflow: auto;
+	}
+}
+
+.overlaybg {
+	background-image: url(img/overlay-bg.jpg);
+}
+.counter-bg {
+	background-image: url(img/counters-bg.jpg);
+}
+
+h2 {
+	line-height: 50px;
+}
+.work-img {
+	height: auto;
+}
+
+/* Loader */
+
+.custom-loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	height: 50px;
+	border: 4px solid #766df4;
+	border-radius: 50%;
+	display: grid;
+	animation: h2 2s infinite linear;
+}
+.custom-loader:before,
+.custom-loader:after {
+	content: "";
+	grid-area: 1/1;
+	border: inherit;
+	border-radius: 50%;
+	animation: inherit;
+	animation-duration: 3s;
+}
+.custom-loader:after {
+	--s: -1;
+}
+
+@keyframes h2 {
+	100% {
+		transform: rotate(calc(var(--s, 1) * 1turn));
 	}
 }

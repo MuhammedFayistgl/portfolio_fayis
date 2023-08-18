@@ -4,11 +4,7 @@ const Contact: React.FC = () => {
 	return (
 		<>
 			{" "}
-			<section
-				id="contact"
-				className="paralax-mf footer-paralax bg-image sect-mt4 route"
-				style={{ backgroundImage: `url(assets/img/overlay-bg.jpg)` }}
-			>
+			<section id="contact" className="paralax-mf footer-paralax bg-image sect-mt4 route overlaybg">
 				<div className="overlay-mf"></div>
 				<div className="container">
 					<div className="row">
@@ -90,19 +86,20 @@ const Contact: React.FC = () => {
 											</div>
 											<div className="more-info">
 												<p className="lead">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem expedita
-													aperiam aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis mollitia
-													inventore?
+													I noticed you visited my personal website! I'm thrilled to have you drop by. Feel free to leave a
+													comment in the section below—I'd love to hear your thoughts, feedback, or any questions you might have.
+													Your input means a lot to me, and it's a great way for us to connect. Looking forward to your comment!
+													{/* Best regards, [Your Name]" */}
 												</p>
 												<ul className="list-ico">
 													<li>
-														<span className="bi bi-geo-alt"></span> 329 WASHINGTON ST BOSTON, MA 02108
+														<span className="bi bi-geo-alt"></span>INDIA - kerala 
 													</li>
 													<li>
-														<span className="bi bi-phone"></span> (617) 557-0089
+														<span className="bi bi-phone"></span> 8086860760
 													</li>
 													<li>
-														<span className="bi bi-envelope"></span> contact@example.com
+														<span className="bi bi-envelope"></span> muhammedfayisthangal@gmail.com
 													</li>
 												</ul>
 											</div>
@@ -116,7 +113,7 @@ const Contact: React.FC = () => {
 														</a>
 													</li>
 													<li>
-														<a href="">
+														<a href="https://instagram.com/fayis_elm?igshid=ZGUzMzM3NWJiOQ==">
 															<span className="ico-circle">
 																<i className="bi bi-instagram"></i>
 															</span>
@@ -130,7 +127,7 @@ const Contact: React.FC = () => {
 														</a>
 													</li>
 													<li>
-														<a href="">
+														<a href="https://www.linkedin.com/in/muhammad-fayis-thangal-9843011bb">
 															<span className="ico-circle">
 																<i className="bi bi-linkedin"></i>
 															</span>

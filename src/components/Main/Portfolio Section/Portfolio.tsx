@@ -1,39 +1,45 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
+import { Pagination } from "rsuite";
 import Swal from "sweetalert2";
+import { Project_data } from "../../../Data/ProjectData";
+
 
 const Portfolio: React.FC = () => {
-	const data = [
-		{ id: 1, title: "Portfolio", ctegory: "portfolio", imgSrc: "assets/img/work-1.jpg", date: "51/78/2012" },
-		{ id: 2, title: "Portfolio", ctegory: "portfolio", imgSrc: "assets/img/code.jpg", date: "51/78/2012" },
-		{ id: 3, title: "Portfolio", ctegory: "portfolio", imgSrc: "assets/img/work-3.jpg", date: "51/78/2012" },
-		{ id: 4, title: "Portfolio", ctegory: "portfolio", imgSrc: "assets/img/work-4.jpg", date: "51/78/2012" },
-	];
+	const [activePage, setActivePage] = React.useState(1);
+
+
+
+
 	return (
 		<>
-			<section id="work" className="portfolio-mf sect-pt4 route">
+			<section id="work" className="portfolio-mf sect-pt4 mt-5 route">
 				<div className="container">
 					<div className="row">
 						<div className="col-sm-12">
 							<div className="title-box text-center">
-								<h3 className="title-a">Portfolio</h3>
-								<p className="subtitle-a">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+								<h3 className="title-a">Projects</h3>
+								<p className="subtitle-a">
+									Join me on this journey where technology meets artistry, and let's collaborate to turn your visions into
+									captivating virtual realities. Together, we'll breathe life into the intangible, and your digital dreams will
+									resonate with the symphony of success.
+								</p>
 								<div className="line-mf"></div>
 							</div>
 						</div>
 					</div>
 					<div className="row">
-						{data.map((value) => {
+						{Project_data?.slice(activePage - 1, activePage + 2).map((value) => {
 							return (
 								<>
-									<div className="col-md-4" key={value.id}>
+									<div className="col-md-4" key={value?.id}>
 										<div className="work-box ">
 											<a
 												onClick={() => {
 													Swal.fire({
 														title: "Sweet!",
 														text: "Modal with a custom image.",
-														imageUrl: "assets/img/work-1.jpg",
+														imageUrl: "img/work-1.jpg",
 														imageWidth: 400,
 														imageHeight: 200,
 														imageAlt: "Custom image",
@@ -42,7 +48,7 @@ const Portfolio: React.FC = () => {
 												className="portfolio-lightbox"
 											>
 												<div className="work-img">
-													<img src={value?.imgSrc} alt="" className="img-fluid" />
+													<img width={"100%"} src={value?.imgSrc} alt="" className="img-fluid" />
 												</div>
 											</a>
 											<div className="work-content">
@@ -50,15 +56,16 @@ const Portfolio: React.FC = () => {
 													<div className="col-sm-8">
 														<h2 className="w-title">{value?.title}</h2>
 														<div className="w-more">
-															<span className="w-ctegory">{value?.ctegory}</span> / <span className="w-date">{value?.date}</span>
+															<span className="w-ctegory">{value?.category}</span> / <span className="w-projectdate">{value?.date}</span>
 														</div>
 													</div>
 													<div className="col-sm-4">
 														<div className="w-like">
 															<a href="portfolio-details.html">
-																<Link to={"/portfolio-details"}>
+																<Link to={`portfolio-details/${value?.id}`}>
 																	<span className="bi bi-plus-circle"></span>
 																</Link>
+
 															</a>
 														</div>
 													</div>
@@ -69,192 +76,19 @@ const Portfolio: React.FC = () => {
 								</>
 							);
 						})}
-
-						{/* <div className="col-md-4">
-							<div className="work-box">
-								<a onClick={() => {
-										Swal.fire({
-											title: "Sweet!",
-											text: "Modal with a custom image.",
-											imageUrl: "assets/img/work-2.jpg",
-											imageWidth: 400,
-											imageHeight: 200,
-											imageAlt: "Custom image",
-										});
-									}} className="portfolio-lightbox">
-									<div className="work-img">
-										<img src="assets/img/work-2.jpg" alt="" className="img-fluid" />
-									</div>
-								</a>
-								<div className="work-content">
-									<div className="row">
-										<div className="col-sm-8">
-											<h2 className="w-title">Loreda Cuno Nere</h2>
-											<div className="w-more">
-												<span className="w-ctegory">Web Design</span> / <span className="w-date">18 Sep. 2018</span>
-											</div>
-										</div>
-										<div className="col-sm-4">
-											<div className="w-like">
-												<a href="portfolio-details.html">
-													<Link to={"/portfolio-details"}>
-														<span className="bi bi-plus-circle"></span>
-													</Link>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+						<div className="mb-5 d-flex justify-content-center">
+							<Pagination
+								size="md"
+								prev
+								last
+								next
+								first
+								total={ 50}
+								limit={5}
+								activePage={activePage}
+								onChangePage={setActivePage}
+							/>
 						</div>
-						<div className="col-md-4">
-							<div className="work-box">
-								<a onClick={() => {
-										Swal.fire({
-											title: "Sweet!",
-											text: "Modal with a custom image.",
-											imageUrl: "assets/img/work-3.jpg",
-											imageWidth: 400,
-											imageHeight: 200,
-											imageAlt: "Custom image",
-										});
-									}}  className="portfolio-lightbox">
-									<div className="work-img">
-										<img src="assets/img/work-3.jpg" alt="" className="img-fluid" />
-									</div>
-								</a>
-								<div className="work-content">
-									<div className="row">
-										<div className="col-sm-8">
-											<h2 className="w-title">Mavrito Lana Dere</h2>
-											<div className="w-more">
-												<span className="w-ctegory">Web Design</span> / <span className="w-date">18 Sep. 2018</span>
-											</div>
-										</div>
-										<div className="col-sm-4">
-											<div className="w-like">
-												<a href="portfolio-details.html">
-													<Link to={"/portfolio-details"}>
-														<span className="bi bi-plus-circle"></span>
-													</Link>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="col-md-4">
-							<div className="work-box">
-								<a onClick={() => {
-										Swal.fire({
-											title: "Sweet!",
-											text: "Modal with a custom image.",
-											imageUrl: "assets/img/work-4.jpg",
-											imageWidth: 400,
-											imageHeight: 200,
-											imageAlt: "Custom image",
-										});
-									}} className="portfolio-lightbox">
-									<div className="work-img">
-										<img src="assets/img/work-4.jpg" alt="" className="img-fluid" />
-									</div>
-								</a>
-								<div className="work-content">
-									<div className="row">
-										<div className="col-sm-8">
-											<h2 className="w-title">Bindo Laro Cado</h2>
-											<div className="w-more">
-												<span className="w-ctegory">Web Design</span> / <span className="w-date">18 Sep. 2018</span>
-											</div>
-										</div>
-										<div className="col-sm-4">
-											<div className="w-like">
-												<a href="portfolio-details.html">
-													<Link to={"/portfolio-details"}>
-														<span className="bi bi-plus-circle"></span>
-													</Link>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="col-md-4">
-							<div className="work-box">
-								<a onClick={() => {
-										Swal.fire({
-											title: "Sweet!",
-											text: "Modal with a custom image.",
-											imageUrl: "assets/img/work-5.jpg",
-											imageWidth: 400,
-											imageHeight: 200,
-											imageAlt: "Custom image",
-										});
-									}} className="portfolio-lightbox">
-									<div className="work-img">
-										<img src="assets/img/work-5.jpg" alt="" className="img-fluid" />
-									</div>
-								</a>
-								<div className="work-content">
-									<div className="row">
-										<div className="col-sm-8">
-											<h2 className="w-title">Studio Lena Mado</h2>
-											<div className="w-more">
-												<span className="w-ctegory">Web Design</span> / <span className="w-date">18 Sep. 2018</span>
-											</div>
-										</div>
-										<div className="col-sm-4">
-											<div className="w-like">
-												<a href="portfolio-details.html">
-													<Link to={"/portfolio-details"}>
-														<span className="bi bi-plus-circle"></span>
-													</Link>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="col-md-4">
-							<div className="work-box">
-								<a onClick={() => {
-										Swal.fire({
-											title: "Sweet!",
-											text: "Modal with a custom image.",
-											imageUrl: "assets/img/work-6.jpg",
-											imageWidth: 400,
-											imageHeight: 200,
-											imageAlt: "Custom image",
-										});
-									}} className="portfolio-lightbox">
-									<div className="work-img">
-										<img src="assets/img/work-6.jpg" alt="" className="img-fluid" />
-									</div>
-								</a>
-								<div className="work-content">
-									<div className="row">
-										<div className="col-sm-8">
-											<h2 className="w-title">Studio Big Bang</h2>
-											<div className="w-more">
-												<span className="w-ctegory">Web Design</span> / <span className="w-date">18 Sep. 2017</span>
-											</div>
-										</div>
-										<div className="col-sm-4">
-											<div className="w-like">
-												<a href="portfolio-details.html">
-													<Link to={"/portfolio-details"}>
-														<span className="bi bi-plus-circle"></span>
-													</Link>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> */}
 					</div>
 				</div>
 			</section>

@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Typed from "react-typed";
+
 const Hero: React.FC = () => {
 	return (
 		<>
 			{" "}
-			<div id="hero" className="hero route bg-image" style={{ backgroundImage: `url(assets/img/myProfile.jpg)` }}>
+			<div id="hero" className="hero route bg-image" >
 				<div className="overlay-itro"></div>
 				<div className="hero-content display-table">
 					<div className="table-cell">
 						<div className="container">
-							<p className="display-6 color-d">Hello, world!</p>
+							
 							<h1 className="hero-title mb-4">I am Muhammed Fayis</h1>
 							<p className="hero-subtitle">
 								<Typed

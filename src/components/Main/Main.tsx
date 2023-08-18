@@ -1,11 +1,11 @@
-import React from "react";
-import About from "./About Section/About";
-import Services from "./Services Section/Services";
-import Counter from "./Counter Section/Counter";
-import Portfolio from "./Portfolio Section/Portfolio";
-import Testimonials from "./Testimonials Section/Testimonials";
-import Blog from "./Blog Section/Blog";
-import Contact from "./Contact Section/Contact";
+import React, { lazy } from "react";
+const About = lazy(() => import("./About Section/About"));
+const Services = lazy(() => import("./Services Section/Services"));
+const Counter = lazy(() => import("./Counter Section/Counter"));
+const Portfolio = lazy(() => import("./Portfolio Section/Portfolio"));
+const Testimonials = lazy(() => import("./Testimonials Section/Testimonials"));
+const Blog = lazy(() => import("./Blog Section/Blog"));
+const Contact = lazy(() => import("./Contact Section/Contact"));
 
 const Main: React.FC = () => {
 	return (
