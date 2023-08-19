@@ -10,10 +10,10 @@ import { useParams } from "react-router-dom";
 import { Project_data } from "../../../Data/ProjectData";
 
 const Portfoliodetails: React.FC = () => {
-const {id} = useParams()
-console.log(id);
-const data = Project_data.filter(data => `${data.id}` === id)[0]
-console.log(data);
+	const { id } = useParams();
+	console.log(id);
+	const data = Project_data.filter((data) => `${data.id}` === id)[0];
+	console.log(data);
 
 	return (
 		<>
@@ -24,7 +24,7 @@ console.log(data);
 						<div className="container">
 							<h2 className="hero-title mb-4">Project Details</h2>
 							<ol className="breadcrumb d-flex justify-content-center">
-							<BreadcrumbComp		/>
+								<BreadcrumbComp />
 								{/* <li className="breadcrumb-item">
 									<a href="#">Home</a>
 								</li>
@@ -50,15 +50,15 @@ console.log(data);
 											modules={[Pagination]}
 											className="mySwiper"
 										>
-											{data?.extrasrc.map( (data) => { return (
-
-												<SwiperSlide>
-												<div className="swiper-slide">
-													<img src={data} alt="" />
-												</div>
-											</SwiperSlide>
-											)})}
-
+											{data?.extrasrc.map((data) => {
+												return (
+													<SwiperSlide>
+														<div className="swiper-slide">
+															<img src={data} alt="" />
+														</div>
+													</SwiperSlide>
+												);
+											})}
 										</Swiper>
 									</div>
 									{/* <div className="swiper-pagination"></div> */}
@@ -79,15 +79,13 @@ console.log(data);
 											<strong>Project date</strong>:{data?.projectdate}
 										</li>
 										<li>
-											<strong>Project URL</strong>: <a >{data?.projectURL}</a>
+											<strong>Project URL</strong>: <a>{data?.projectURL}</a>
 										</li>
 									</ul>
 								</div>
 								<div className="portfolio-description mb-5">
 									<h2>This is an example of Project detail</h2>
-									<p>
-									{data.projectdetail}
-									</p>
+									<p>{data.projectdetail}</p>
 								</div>
 							</div>
 						</div>

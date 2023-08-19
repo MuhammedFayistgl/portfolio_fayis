@@ -5,7 +5,7 @@ export const Vlogs = [
         author: 'muhammed fayis',
         category: 'TRAVEL',
         title: "Logs",
-        date:Date.now(),
+        date: Date.now(),
         articlecontent: `
         "Journeying Beyond Horizons: The Enchanting Tapestry of Travel Literature"
 Travel, an eternal quest for human exploration, has been immortalized through the ages in the rich tapestry of travel literature. From ancient epics like Homer's "Odyssey" to modern classics like Kerouac's "On the Road," these narratives offer windows into the diverse landscapes of our world and the human spirit.
@@ -15,7 +15,7 @@ As travel evolves, so does its literary portrayal. In the digital age, blogs and
 In essence, travel literature is a multidimensional tapestry weaving together landscapes, cultures, and personal narratives. It captures the intrepid human spirit, encourages empathy, and beckons us to embark on our own journeys—whether across continents or within the pages of a cherished book. Through the written word, travel literature immortalizes the profound connection between the world, the traveler, and the reader."
 
         `,
-        comments:[ {
+        comments: [{
             commentauthor: 'ashker',
             date: '2014-54-5454',
             commentvalue: `Your written article beautifully captures the essence of travel literature as a multidimensional tapestry that weaves together exploration, personal growth, and cultural understanding. The references to classic and contemporary works, along with their impact on readers, add depth to your analysis. The way you emphasize the transformative power of travel narratives and their ability to transport readers to distant lands is truly engaging. The article effectively showcases the enduring appeal of travel literature and its role in connecting individuals across time and space. Well done!            `,
@@ -24,7 +24,7 @@ In essence, travel literature is a multidimensional tapestry weaving together la
         recentpost: [],
 
     },
-    
+
     {
         id: 54896,
         author: 'muhammed fayis',
@@ -39,7 +39,7 @@ As travel evolves, so does its literary portrayal. In the digital age, blogs and
 In essence, travel literature is a multidimensional tapestry weaving together landscapes, cultures, and personal narratives. It captures the intrepid human spirit, encourages empathy, and beckons us to embark on our own journeys—whether across continents or within the pages of a cherished book. Through the written word, travel literature immortalizes the profound connection between the world, the traveler, and the reader."
 
         `,
-        comments:[ {
+        comments: [{
             commentauthor: 'ashker',
             date: '2014-54-5454',
             commentvalue: `Your written article beautifully captures the essence of travel literature as a multidimensional tapestry that weaves together exploration, personal growth, and cultural understanding. The references to classic and contemporary works, along with their impact on readers, add depth to your analysis. The way you emphasize the transformative power of travel narratives and their ability to transport readers to distant lands is truly engaging. The article effectively showcases the enduring appeal of travel literature and its role in connecting individuals across time and space. Well done!            `,
@@ -48,7 +48,7 @@ In essence, travel literature is a multidimensional tapestry weaving together la
         recentpost: [],
 
     },
-    
+
     {
         id: 546324,
         author: 'muhammed fayis',
@@ -63,12 +63,12 @@ As travel evolves, so does its literary portrayal. In the digital age, blogs and
 In essence, travel literature is a multidimensional tapestry weaving together landscapes, cultures, and personal narratives. It captures the intrepid human spirit, encourages empathy, and beckons us to embark on our own journeys—whether across continents or within the pages of a cherished book. Through the written word, travel literature immortalizes the profound connection between the world, the traveler, and the reader."
 
         `,
-        comments:[ {
+        comments: [{
             commentauthor: 'ashker',
             date: '2014-54-5454',
             commentvalue: `Your written article beautifully captures the essence of travel literature as a multidimensional tapestry that weaves together exploration, personal growth, and cultural understanding. The references to classic and contemporary works, along with their impact on readers, add depth to your analysis. The way you emphasize the transformative power of travel narratives and their ability to transport readers to distant lands is truly engaging. The article effectively showcases the enduring appeal of travel literature and its role in connecting individuals across time and space. Well done!            `,
             avatarurl: 'http://',
-            reply:''
+            reply: ''
         }],
         recentpost: [],
 

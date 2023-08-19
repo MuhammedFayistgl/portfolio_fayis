@@ -1,9 +1,9 @@
+const Loader = () => {
+	return (
+		<>
+			<div className="custom-loader"></div>
+		</>
+	);
+};
 
-
-const Loader = ()  => {
-  return (
-    <><div className="custom-loader"></div></>
-  )
-}
-
-export default Loader
+export default Loader;
