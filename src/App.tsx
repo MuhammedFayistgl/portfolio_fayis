@@ -42,8 +42,8 @@ const App: React.FunctionComponent = () => {
 				<Route path={"/contact"} element={<Contact />} />
 
 				{/* extra coponents */}
-				<Route path={"Work/portfolio-details/:id"} element={<Portfoliodetails />} />
-				<Route path={"Blog/Blog-Single-details/:id"} element={<BlogSingle />} />
+				<Route path={"/portfolio-details/:id"} element={<Portfoliodetails />} />
+				<Route path={"/Blog-Single-details/:id"} element={<BlogSingle />} />
 			</Routes>
 			<Footer />
 		</Suspense>

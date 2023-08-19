@@ -1,5 +1,5 @@
 import React from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Pagination } from "rsuite";
 import Swal from "sweetalert2";
 import { Project_data } from "../../../Data/ProjectData";
@@ -7,9 +7,6 @@ import { Project_data } from "../../../Data/ProjectData";
 
 const Portfolio: React.FC = () => {
 	const [activePage, setActivePage] = React.useState(1);
-
-
-
 
 	return (
 		<>
@@ -56,16 +53,16 @@ const Portfolio: React.FC = () => {
 													<div className="col-sm-8">
 														<h2 className="w-title">{value?.title}</h2>
 														<div className="w-more">
-															<span className="w-ctegory">{value?.category}</span> / <span className="w-projectdate">{value?.date}</span>
+															<span className="w-ctegory">{value?.category}</span> /{" "}
+															<span className="w-projectdate">{value?.date}</span>
 														</div>
 													</div>
 													<div className="col-sm-4">
 														<div className="w-like">
 															<a href="portfolio-details.html">
-																<Link to={`portfolio-details/${value?.id}`}>
+																<Link to={`/portfolio-details/${value?.id}`}>
 																	<span className="bi bi-plus-circle"></span>
 																</Link>
-
 															</a>
 														</div>
 													</div>
@@ -83,7 +80,7 @@ const Portfolio: React.FC = () => {
 								last
 								next
 								first
-								total={ 50}
+								total={50}
 								limit={5}
 								activePage={activePage}
 								onChangePage={setActivePage}
@@ -92,6 +89,7 @@ const Portfolio: React.FC = () => {
 					</div>
 				</div>
 			</section>
+			
 		</>
 	);
 };

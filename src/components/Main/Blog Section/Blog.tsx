@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Vlogs } from "../../../Data/VlogData";
 
+
 const Blog: React.FC = () => {
 	return (
 		<>
@@ -17,13 +18,13 @@ const Blog: React.FC = () => {
 						</div>
 					</div>
 					<div className="row">
-						
-							{Vlogs?.map((vlog) => {
-								return (
-									<><div className="col-md-4" key={vlog?.id}>
+						{Vlogs?.map((vlog) => {
+							return (
+								<>
+									<div className="col-md-4" key={vlog?.id}>
 										<div className="card card-blog">
 											<div className="card-img">
-												<Link to={`Blog-Single-details/${vlog?.id}`}>
+												<Link to={`/Blog-Single-details/${vlog?.id}`}>
 													<a>
 														<img src="img/post-1.jpg" alt="" className="img-fluid" />
 													</a>
@@ -36,11 +37,9 @@ const Blog: React.FC = () => {
 													</div>
 												</div>
 												<h3 className="card-title">
-													<a href="blog-single.html">{`See more ideas about ${ vlog?.category.toLocaleLowerCase()}`}</a>
+													<a href="blog-single.html">{`See more ideas about ${vlog?.category.toLocaleLowerCase()}`}</a>
 												</h3>
-												<p className="card-description">
-													{vlog?.articlecontent.slice(0,150)}
-												</p>
+												<p className="card-description">{vlog?.articlecontent.slice(0, 150)}</p>
 											</div>
 											<div className="card-footer">
 												<div className="post-author">
@@ -53,10 +52,11 @@ const Blog: React.FC = () => {
 													<span className="bi bi-clock"></span> 10 min
 												</div>
 											</div>
-										</div></div>
-									</>
-								);
-							})}
+										</div>
+									</div>
+								</>
+							);
+						})}
 						
 						{/* <div className="col-md-4">
 							<div className="card card-blog">

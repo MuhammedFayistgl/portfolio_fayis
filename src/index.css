@@ -730,7 +730,7 @@ h6 {
 	height: 100vh;
 	position: relative;
 	color: #fff;
-	background-image: url(img/myProfile.jpg);
+	background-image: url(/img/myProfile.jpg);
 }
 
 .hero .hero-content {
@@ -1458,10 +1458,10 @@ footer .credits a {
 }
 
 .overlaybg {
-	background-image: url(img/overlay-bg.jpg);
+	background-image: url(/img/overlay-bg.jpg);
 }
 .counter-bg {
-	background-image: url(img/counters-bg.jpg);
+	background-image: url(/img/counters-bg.jpg);
 }
 
 h2 {
