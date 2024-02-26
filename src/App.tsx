@@ -14,35 +14,44 @@ const BlogSingle = lazy(() => import("./components/Routers/Blog Single/BlogSingl
 const Portfoliodetails = lazy(() => import("./components/Routers/portfolio-details/Portfoliodetails"));
 
 import Loader from "./components/sm_Componet/Loader";
+import Signup from "./Pages/Login";
+import Login from "./Pages/Sigiup";
+import axios from "axios";
 
-
+axios.defaults.withCredentials = true;
 const App: React.FunctionComponent = () => {
-	return (
-		<Suspense fallback={<Loader />}>
-			<Header />
-			<Routes>
-				<Route
-					path={"/"}
-					element={
-						<>
-							<Hero />
-							<Main />
-						</>
-					}
-				/>
-				<Route path={"/about"} element={<About />} />
-				<Route path={"/services"} element={<Services />} />
-				<Route path={"/work"} element={<Portfolio />}></Route>
-				<Route path={"/blog"} element={<Blog />} />
-				<Route path={"/contact"} element={<Contact />} />
+    return (
+        <Suspense fallback={<Loader />}>
+            <div className="App-main-container">
+                <Header />
 
-				{/* extra coponents */}
-				<Route path={"/portfolio-details/:id"} element={<Portfoliodetails />} />
-				<Route path={"/Blog-Single-details/:id"} element={<BlogSingle />} />
-			</Routes>
-			<Footer />
-		</Suspense>
-	);
+                <Routes>
+                    <Route
+                        path={"/"}
+                        element={
+                            <>
+                                <Hero />
+                                <Main />
+                            </>
+                        }
+                    />
+                    <Route path={"/Sigin"} element={<Login />} />
+                    <Route path={"/Login"} element={<Signup />} />
+                    <Route path={"/about"} element={<About />} />
+
+                    <Route path={"/services"} element={<Services />} />
+                    <Route path={"/work"} element={<Portfolio />}></Route>
+                    <Route path={"/blog"} element={<Blog />} />
+                    <Route path={"/contact"} element={<Contact />} />
+
+                    {/* extra coponents */}
+                    <Route path={"/portfolio-details/:id"} element={<Portfoliodetails />} />
+                    <Route path={"/Blog-Single-details/:id"} element={<BlogSingle />} />
+                </Routes>
+                <Footer />
+            </div>
+        </Suspense>
+    );
 };
 
 export default App;

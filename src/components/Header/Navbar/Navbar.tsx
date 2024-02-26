@@ -39,10 +39,16 @@ const Navbar: React.FC = () => {
 			to: "/Blog",
 		},
 		
+		
 		{
 			id: 6556259777,
-			field: "Contact",
-			to: "/Contact",
+			field: "Sigin",
+			to: "/Sigin",
+		},
+		{
+			id: 6556259777,
+			field: "Login",
+			to: "/Login",
 		},
 	];
 

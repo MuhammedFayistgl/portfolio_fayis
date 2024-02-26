@@ -1,4 +1,5 @@
 import React from "react";
+import FormContact from "./FormContact";
 
 const Contact: React.FC = () => {
 	return (
@@ -16,68 +17,8 @@ const Contact: React.FC = () => {
 											<div className="title-box-2">
 												<h5 className="title-left">Send Message Us</h5>
 											</div>
-											<div>
-												<form action="forms/contact.php" method="post" role="form" className="php-email-form">
-													<div className="row">
-														<div className="col-md-12 mb-3">
-															<div className="form-group">
-																<input
-																	type="text"
-																	name="name"
-																	className="form-control"
-																	id="name"
-																	placeholder="Your Name"
-																	required
-																/>
-															</div>
-														</div>
-														<div className="col-md-12 mb-3">
-															<div className="form-group">
-																<input
-																	type="email"
-																	className="form-control"
-																	name="email"
-																	id="email"
-																	placeholder="Your Email"
-																	required
-																/>
-															</div>
-														</div>
-														<div className="col-md-12 mb-3">
-															<div className="form-group">
-																<input
-																	type="text"
-																	className="form-control"
-																	name="subject"
-																	id="subject"
-																	placeholder="Subject"
-																	required
-																/>
-															</div>
-														</div>
-														<div className="col-md-12">
-															<div className="form-group">
-																<textarea
-																	className="form-control"
-																	name="message"
-																	rows={5}
-																	placeholder="Message"
-																	required
-																></textarea>
-															</div>
-														</div>
-														<div className="col-md-12 text-center my-3">
-															<div className="loading">Loading</div>
-															<div className="error-message"></div>
-															<div className="sent-message">Your message has been sent. Thank you!</div>
-														</div>
-														<div className="col-md-12 text-center">
-															<button type="submit" className="button button-a button-big button-rouded">
-																Send Message
-															</button>
-														</div>
-													</div>
-												</form>
+											<div>						
+												<FormContact/>
 											</div>
 										</div>
 										<div className="col-md-6">

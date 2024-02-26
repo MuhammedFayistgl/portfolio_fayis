@@ -26,10 +26,10 @@ const Portfolio: React.FC = () => {
 						</div>
 					</div>
 					<div className="row">
-						{Project_data?.slice(activePage - 1, activePage + 2).map((value) => {
+						{Project_data?.slice(activePage - 1, activePage + 2).map((value,i) => {
 							return (
 								<>
-									<div className="col-md-4" key={value?.id}>
+									<div className="col-md-4" key={i}>
 										<div className="work-box ">
 											<a
 												onClick={() => {

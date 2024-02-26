@@ -27,7 +27,7 @@ const About: React.FC = () => {
 														<span className="title-s">Name: </span> <span>Muhammed Fayis Thangal</span>
 													</p>
 													<p>
-														<span className="title-s">Profile: </span> <span>full stack developer</span>
+														<span className="title-s">Profile: </span> <span>Full Stack Developer</span>
 													</p>
 													<p>
 														<span className="title-s">Email: </span> <span>muhammedfayisthangal@gmail.com</span>
@@ -47,17 +47,7 @@ const About: React.FC = () => {
 											<span>Nodejs</span> <span className="pull-right">50%</span>
 											<ProgressComp percent={50} status={"active"} />
 											<span>MongoDB</span> <span className="pull-right">90%</span>
-											<ProgressComp percent={40} status={"active"} />
-											{/* <div className="progress">
-												<div
-													className="progress-bar"
-													role="progressbar"
-													style={{ width: "90%" }}
-													aria-valuenow={90}
-													aria-valuemin={0}
-													aria-valuemax={100}
-												></div>
-											</div> */}
+											<ProgressComp percent={40} status={"active"} />									
 										</div>
 									</div>
 									<div className="col-md-6">
@@ -69,14 +59,7 @@ const About: React.FC = () => {
 												I am Muhammed Fayis Thangal, a passionate freelancer bringing you programming and design from the future. My expertise is
 												developing next-level websites and web applications including full frontend design.
 											</p>
-											{/* <p className="lead">
-												Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor
-												volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
-											</p>
-											<p className="lead">
-												Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla
-												porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-											</p> */}
+											
 										</div>
 									</div>
 								</div>

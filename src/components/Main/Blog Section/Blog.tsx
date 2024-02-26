@@ -18,10 +18,10 @@ const Blog: React.FC = () => {
 						</div>
 					</div>
 					<div className="row">
-						{Vlogs?.map((vlog) => {
+						{Vlogs?.map((vlog,i) => {
 							return (
 								<>
-									<div className="col-md-4" key={vlog?.id}>
+									<div className="col-md-4" key={i}>
 										<div className="card card-blog">
 											<div className="card-img">
 												<Link to={`/Blog-Single-details/${vlog?.id}`}>

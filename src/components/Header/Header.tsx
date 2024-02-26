@@ -11,7 +11,7 @@ const Header: React.FC = () => {
 
 	
 	return (
-		<>
+		<div>
 			<header id="header" className={'fixed-top header-scrolled'}>
 				<div className="container d-flex align-items-center justify-content-between">
 					<h1 className="logo">
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
 					<Navbar/>
 				</div>
 			</header>
-		</>
+		</div>
 	);
 };
 
