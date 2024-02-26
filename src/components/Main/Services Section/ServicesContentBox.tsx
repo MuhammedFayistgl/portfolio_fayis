@@ -14,7 +14,7 @@ const ServicesContentBox = ({ data }: PropsType) => {
                     </span>
                 </div>
                 <div className="service-content">
-                    <h2 className="s-title">{data?.title}</h2>
+                    <h2  className="s-title">{data?.title}</h2>
                     <p style={{maxHeight:'250px',overflowY:'scroll' }} className="s-description  text-center">{data?.description}</p>
                 </div>
             </div>

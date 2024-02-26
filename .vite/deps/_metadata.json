@@ -1,0 +1,83 @@
+{
+  "hash": "b4ea92b3",
+  "browserHash": "9441e22e",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "db30a6c4",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "e9359e37",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "c5302759",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "e76cd336",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "2de72212",
+      "needsInterop": false
+    },
+    "react-typed": {
+      "src": "../../node_modules/react-typed/dist/react-typed.js",
+      "file": "react-typed.js",
+      "fileHash": "acd2bca1",
+      "needsInterop": true
+    },
+    "react-toast-notifications": {
+      "src": "../../node_modules/react-toast-notifications/dist/index.js",
+      "file": "react-toast-notifications.js",
+      "fileHash": "112d5d48",
+      "needsInterop": true
+    },
+    "react-cookie": {
+      "src": "../../node_modules/react-cookie/es6/index.js",
+      "file": "react-cookie.js",
+      "fileHash": "e107179a",
+      "needsInterop": false
+    },
+    "rsuite": {
+      "src": "../../node_modules/rsuite/esm/index.js",
+      "file": "rsuite.js",
+      "fileHash": "fb7bcf0a",
+      "needsInterop": false
+    },
+    "sweetalert2": {
+      "src": "../../node_modules/sweetalert2/dist/sweetalert2.all.js",
+      "file": "sweetalert2.js",
+      "fileHash": "3930d4cb",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-HEWHGM4L": {
+      "file": "chunk-HEWHGM4L.js"
+    },
+    "chunk-KEE3L4NC": {
+      "file": "chunk-KEE3L4NC.js"
+    },
+    "chunk-OTY6O57J": {
+      "file": "chunk-OTY6O57J.js"
+    },
+    "chunk-2PA4WPI3": {
+      "file": "chunk-2PA4WPI3.js"
+    },
+    "chunk-ROME4SDB": {
+      "file": "chunk-ROME4SDB.js"
+    }
+  }
+}
