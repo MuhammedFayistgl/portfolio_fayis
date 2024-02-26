@@ -29,10 +29,11 @@ const App: React.FunctionComponent = () => {
                     <Route
                         path={"/"}
                         element={
-                            <>
+                            <div>
                                 <Hero />
+                            
                                 <Main />
-                            </>
+                            </div>
                         }
                     />
                     <Route path={"/Sigin"} element={<Login />} />
