@@ -11,11 +11,9 @@ import { ToastProvider } from "react-toast-notifications";
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
         <HashRouter>
-           
-                <ToastProvider>
-                    <App />
-                </ToastProvider>
-          
+            <ToastProvider>
+                <App />
+            </ToastProvider>
         </HashRouter>
     </React.StrictMode>
 );
